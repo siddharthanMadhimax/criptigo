@@ -1,0 +1,114 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px; /* Adjust padding for better spacing */
+    color: #ddd;
+    border-bottom: 2px solid #3c3c3c;
+  }
+  
+  .navbar .logo {
+    width: clamp(2rem, 12vw, 120px); /* Responsive logo size */
+  }
+  
+  .navbar ul {
+    display: flex;
+    gap: 20px; /* Adjust gap for better spacing */
+    list-style: none;
+  }
+  
+  .navbar li {
+    cursor: pointer;
+    font-size: 16px; /* Increase font size for better readability */
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust gap for better spacing */
+  }
+  
+  .navbar select {
+    background: transparent;
+    color: white;
+    padding: 5px 8px;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 16px; /* Increase font size for better readability */
+  }
+  
+  .navbar option {
+    background-color: #09005c;
+    color: white;
+  }
+  
+  .navbar button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 16px; /* Increase font size for better readability */
+    font-weight: 500;
+    color: #393939;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .navbar button img {
+    width: 13px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px;
+    }
+  
+    .navbar ul {
+      display: none;
+    }
+  
+    .navbar button img {
+      width: 12px;
+    }
+  
+    /* Hamburger menu icon */
+    .navbar .hamburger-menu {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      background: transparent;
+      color: #ddd;
+    }
+  
+    .navbar .hamburger-menu::before,
+    .navbar .hamburger-menu::after {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #ddd;
+      margin: 5px 0;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .navbar .hamburger-menu.active::before {
+      transform: rotate(45deg) translateY(-10px);
+    }
+  
+    .navbar .hamburger-menu.active::after {
+      transform: rotate(-45deg) translateY(10px);
+    }
+  
+    /* Show navigation links when hamburger menu is clicked */
+    .navbar.show-menu ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #3c3c3c;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  }
